@@ -5,3 +5,12 @@ services:
 script:
   - docker build -t kinjaldocker/node .
   - docker images kinjaldocker/node
+
+before_deploy:
+  - docker login -u kinjaldocker -p Gj6@k3219
+
+deploy:
+  provider: script
+  script: docker push kinjaldocker/node
+  on
+    branch: initial
