@@ -13,4 +13,4 @@ deploy:
   provider: script
   script: docker push kinjaldocker/node
   on:
-    branch: master
+    branch: initial
