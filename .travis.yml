@@ -12,5 +12,5 @@ before_deploy:
 deploy:
   provider: script
   script: docker push kinjaldocker/node
-  on
+  on:
     branch: master
